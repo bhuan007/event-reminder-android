@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Date Reminder</string>
+    <string-array name="reminder">
+        <item>No</item>
+        <item>Yes</item>
+    </string-array>
+    <string name="delete_message">Are you sure you want to delete </string>
+</resources>

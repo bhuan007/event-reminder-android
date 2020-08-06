@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/list_border"
+    android:orientation="horizontal"
+    android:id="@+id/eventContainer"
+    android:layout_marginBottom="8dp"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="5"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Christmas Eve"
+            android:textSize="24sp"
+            android:textColor="#000000"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/txtDate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="16sp"
+            android:text="December 24th, 2020 12:00 AM" />
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_weight="3"
+        android:gravity="center"
+        android:layout_gravity="center">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:id="@+id/txtCountDown"
+            android:textSize="16sp"
+            android:text="2 DAYS / 1 HRS"
+            android:gravity="center"
+            android:textColor="@color/colorPrimary"/>
+        <TextView
+            android:id="@+id/txtRemain"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="REMAINING"
+            android:textSize="12sp"/>
+
+    </LinearLayout>
+
+
+    <Button
+        android:id="@+id/btnDelete"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginStart="8dp"
+        android:layout_weight="1"
+        android:text="X"
+        android:textSize="16sp"
+        android:backgroundTint="@color/delete"
+        android:layout_gravity="center_vertical" />
+
+
+</LinearLayout>
