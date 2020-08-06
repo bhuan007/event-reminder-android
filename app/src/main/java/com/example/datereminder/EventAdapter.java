@@ -68,9 +68,10 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
         // if difference is less than a day
 
         if (timeDiff < 0) {
+            holder.eventContainer.setAlpha((float) 0.3);
             holder.txtCountDown.setText("EVENT ENDED");
             holder.txtRemain.setVisibility(View.GONE);
-            holder.eventContainer.setAlpha((float) 0.3);
+
         }
         else if (timeDiff < 86400000) {
             String countDownFormat = String.format("%s HRS %s MINS", hours, minutes);
@@ -121,7 +122,6 @@ public class EventAdapter extends RecyclerView.Adapter<EventAdapter.ViewHolder> 
                 try {
                     Intent intent = new Intent(context, AddEventActivity.class);
                     intent.putExtra(EVENT_STRING, events.get(position));
-                    intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
                     context.startActivity(intent);
                 } catch (Exception e) {
                     Toast.makeText(context, "Oops! An error occurred.", Toast.LENGTH_SHORT).show();

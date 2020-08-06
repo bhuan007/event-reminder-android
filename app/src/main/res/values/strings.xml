@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Date Reminder</string>
+    <string name="app_name">Event Reminder</string>
     <string-array name="reminder">
         <item>No</item>
         <item>Yes</item>

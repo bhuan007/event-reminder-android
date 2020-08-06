@@ -175,6 +175,14 @@ public class AddEventActivity extends AppCompatActivity {
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        Intent intent = new Intent(AddEventActivity.this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
     private void initViews() {
         etName = findViewById(R.id.etName);
         btnEventDate = findViewById(R.id.btnEventDate);
